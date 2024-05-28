@@ -1,16 +1,11 @@
-Definición del Proyecto: Objetivos, Datos, Introducción de la Enfermedad.
-
-Intrroducción; Librerías más utilizadas y generación del Data Frame: EDA de nuestros datos-> mencionar el desbalance de clases y presentar el DF final con el que trabajamos. Comentar que filtramos varios datos, por ejemplo.
-
-Pre-Procesamiento: las dos funciones que usamos y podríamos presentar el histograma de Raquel también como una alternativa que estuvimos abarajando.
-Separación train test val + Generador de Imágenes (ImageDataGenerator + flow_from_dataframe) -> Esto súper breve me lo imagino porque no tiene demasiado contenido.
-
-Funciones de Métricas y Callbacks.
-
-Compile + Fit
-
-Resultados -> Aquí me imagino pasando a streamlit para visualizar las métricas como las tiene Raquel. Me parece que es fundamental hacer una Matriz de Confusión para que se vean bien los resultados.
-
-Si nos da el tiempo mencionar otros modelos que instanciamos.
-
 https://deteccion-retinopatia-diabetica.streamlit.app/
+
+Este proyecto se centra en el desarrollo de un modelo predictivo para la clasificación de imágenes, empleando una red neuronal convolucional (CNN).
+
+El conjunto de datos utilizado consta de 25,000 imágenes de escáneres de retina, clasificadas de manera binaria en función de la presencia o ausencia de retinopatía.
+
+Durante la exploración del conjunto de datos, se identificó un desbalance significativo entre las clases, con una menor cantidad de imágenes correspondientes a retinas afectadas por retinopatía. Para mitigar este desbalance, se aplicaron técnicas de ponderación, asignando un mayor peso a la clase minoritaria durante el entrenamiento del modelo.
+
+Las imágenes corruptas fueron eliminadas y se llevaron a cabo múltiples técnicas de preprocesamiento para optimizar el aprendizaje del modelo. Se emplearon generadores de imágenes para preprocesar, redimensionar y escalar las imágenes adecuadamente antes de ser ingresadas en el modelo.
+
+Se utilizó aprendizaje por transferencia mediante el modelo preentrenado DenseNet121, el cual fue adaptado específicamente para la tarea de clasificación binaria de este proyecto.
